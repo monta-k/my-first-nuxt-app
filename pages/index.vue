@@ -28,6 +28,10 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  async mounted() {
+      const data = await this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
+      console.log(JSON.stringify(data))
   }
 }
 </script>
