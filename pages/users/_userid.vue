@@ -39,6 +39,7 @@ export default {
     try {
       await store.dispatch('fetchUserInfo', { id: route.params.userid })
     } catch (e) {
+      console.log(e)
       redirect('/')
     }
   },

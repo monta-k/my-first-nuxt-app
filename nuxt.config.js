@@ -24,6 +24,11 @@ module.exports = {
   axios: {
 
   },
+  router: {
+    middleware: [
+      'auth'
+    ]
+  },
   plugins: [
     '~/plugins/axios.js'
   ],
